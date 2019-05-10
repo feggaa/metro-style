@@ -1283,8 +1283,8 @@ Func _Metro_CreateButtonImage($Text,$ImageMap,$Left, $Top, $Width, $Height, $BG_
 		If $ImageMap.Top  = Default Then $ImageMap.Top = ($Height-$Height/1.5)/2
 		If $ImageMap.Width  = Default Then $ImageMap.Width = $Height/1.5
 		If $ImageMap.Height  = Default Then $ImageMap.Height = $Height/1.5
-		_GDIPlus_GraphicsDrawImageRect($Button_Graphic1[0], $hImage,($Height-$Height/1.5)/2,($Height-$Height/1.5)/2,$Height/1.5, $Height/1.5)
-		_GDIPlus_GraphicsDrawImageRect($Button_Graphic2[0], $hImage,($Height-$Height/1.5)/2,($Height-$Height/1.5)/2,$Height/1.5, $Height/1.5)
+		_GDIPlus_GraphicsDrawImageRect($Button_Graphic1[0], $hImage,$ImageMap.Left,$ImageMap.Top,$ImageMap.Width,$ImageMap.Height)
+		_GDIPlus_GraphicsDrawImageRect($Button_Graphic2[0], $hImage,$ImageMap.Left,$ImageMap.Top,$ImageMap.Width,$ImageMap.Height)
 		_GDIPlus_ImageDispose($hImage)
 	EndIf
 	;Create font, Set font options
